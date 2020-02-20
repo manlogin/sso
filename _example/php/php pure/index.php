@@ -1,6 +1,6 @@
 <?php
 	/*
-	 اطلاعات زیر رو باید با توجه به اپی که در سایت من لاگین ساخته اید، تکمیل نمایید
+	 اطلاعات زیر رو باید با توجه به نرم افزار که در سایت من لاگین ساخته اید، تکمیل نمایید
 
 	 برای افزودن نرم افزار جدید به این آدرس مراجعه نمایید:
 	 https://manlogin.com/panel#/developers/apps
@@ -9,13 +9,13 @@
 	
 	$site_url 				= "http://localhost/sso/_example/php/php%20pure/"; //آدرس صفحه ای را که میخواهید بعد از بازگشت از اس اس او به آن ارجاع داده شوید، وارد کنید
 
-	$manLogin_sso_uid 		="0x9c43"; //شناسه یکتا
+	$manLogin_sso_uid 		=""; //شناسه یکتا
 
-	$manLogin_sso_publicKey ="76f5a0101f5828c9c791e48c33222476750ff037d7f1200ce8642c3289596c44"; //کلید عمومی
+	$manLogin_sso_publicKey =""; //کلید عمومی
 
-	$manLogin_sso_S2SToken 	="b35f268d41d79a949291559eda51f305e9ad5486cd697355aa75bac8872a6823"; //کلید ارتباط سرور به سرور
+	$manLogin_sso_S2SToken 	=""; //کلید ارتباط سرور به سرور
 
-	$manLogin_sso_token 	="a6df5eca70a71d7f38354b05ce1536b828109a490bcd8c4ddbf79ed0457eae88"; //کلید ساختن هش ریکوئست
+	$manLogin_sso_token 	=""; //کلید ساختن هش ریکوئست
 
 
 	$jwt = new JWT();
