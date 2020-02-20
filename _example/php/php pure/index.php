@@ -26,7 +26,6 @@
 	$familyName 	= "";
 	$sso_user_uid 	= "";
 	$mobile			= "";
-	$message = array();
 
 	if (isset($_GET['ticket'])) {
 		$callBackData = $jwt->decode($_GET['ticket'],$manLogin_sso_publicKey); // decode ticket
@@ -53,25 +52,6 @@
 					}
 				}
 			}
-		}
-	}
-
-
-	if(isset($_POST["pcaptcha"])){
-
-		$pcaptcha 	= $_POST["pcaptcha"]; // مقداری است که از طریق فرم ارسال شده است
-		$uid 		= "0x4e2e"; // کد یکتای کپچای شما در سایت من لاکین
-		$secretKey 	= "e8414ae66a37806bae1166a6297ce302a393e70b8e444b37abe20fe4e277779c"; // کلید خصوصی
-		$url        = "https://manlogin.com/captcha/cheack/v1/$uid/$secretKey/$pcaptcha";
-		$verifyResponse = file_get_contents($url);
-		$responseData = json_decode($verifyResponse);
-		if(isset($responseData->success) && $responseData->success){
-			// کپچای شما تایید شده است و می توانید ادامه کار رو انجام دهید
-			$message["class"] 	= "alert-success";
-			$message["text"] 	= "با موفقیت انجام شد";
-		}else{
-			$message["class"] 	= "alert-danger";
-			$message["text"] 	= "قسمت من ربات نیستم به درستی انجام نشده است!!";
 		}
 	}
 ?>
