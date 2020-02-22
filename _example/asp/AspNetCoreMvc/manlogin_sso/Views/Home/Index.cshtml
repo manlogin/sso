@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    @if ((bool)ViewData["login"] == true)
+    {
+        <h1 class="display-4">@ViewData["name"] @ViewData["familyName"] خوش آمدید</h1>
+        <p>شماره موبایل: @ViewData["mobile"]</p>
+        <hr>
+        <a href='@ViewData["callbackUrl"]'>
+            <img title="Login By ManLogin" src="~/images/logout.svg">
+        </a>
+    }else{
+        <h1 class="display-4">برای ورود روی لینک زیر کلیک کنید</h1>
+        <hr>
+        <a href='https://manlogin.com/cas/login?service=@ViewData["callbackUrl"]&hash=@ViewData["hash"]'>
+            <img title="Login By ManLogin" src="~/images/login-by-manlogin-sso.svg">
+        </a>
+    }
+    <hr>
+</div>
